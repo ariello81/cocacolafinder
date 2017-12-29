@@ -22,6 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 import pl.edcexpert.cocacola.finder.dao.FakturaDao;
 import pl.edcexpert.cocacola.finder.dao.PakietDao;
 import pl.edcexpert.cocacola.finder.model.Faktura;
+import pl.edcexpert.cocacola.finder.model.Greeting;
 import pl.edcexpert.cocacola.finder.model.QueryResponseBody;
 
 
@@ -57,8 +58,10 @@ public final class HomeController {
 		 ModelAndView mav = new ModelAndView("hello");
 		 RestTemplate restTemplate = new RestTemplate();
 		 QueryResponseBody query = restTemplate.getForObject("https://jsonplaceholder.typicode.com/posts/3", QueryResponseBody.class);
-		 System.out.println(query.getTitle());
-		 mav.addObject("text", "Hello World!!");
+		 String name = "Ariel";
+		 Greeting greeting = restTemplate.getForObject("http://localhost:8080/restserver2/greeting?name="+name, Greeting.class);
+		 mav.addObject("query", query.getTitle());
+		 mav.addObject("greeting", "Hello" + greeting.getContent());
 		 return mav;
 	 }
 	 

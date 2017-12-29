@@ -7,6 +7,7 @@
 	</head>
 	
 	<body style="font-family: Arial; font-size: smaller;">
-  		<h3 align="center">${text}</h3>
+  		<h3 align="center">${query}</h3>
+  		<h2 align="center">${greeting}</h2>
 	</body>
 </html>

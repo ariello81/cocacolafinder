@@ -217,25 +217,7 @@
 	            <configuration>
 	                <failOnMissingWebXml>false</failOnMissingWebXml>
 	            </configuration>
-	        </plugin>   
-	        <plugin>
-				 <groupId>org.jsonschema2pojo</groupId>
-				 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-				 <version>0.4.34</version>
-				 <configuration>
-					 <sourceDirectory>https://jsonplaceholder.typicode.com/posts/3</sourceDirectory>
-					 <targetPackage>pl.edcexpert.cocacola.finder.json</targetPackage>
-					 <useCommonsLang3>true</useCommonsLang3>
-					 <sourceType>json</sourceType>
-				 </configuration>
-				 <executions>
-					 <execution>
-					 <goals>
-					 	<goal>generate</goal>
-					 </goals>
-					 </execution>
-				 </executions>
-		 	</plugin>        
+	        </plugin>          
         </plugins>
     </build>
 </project>
